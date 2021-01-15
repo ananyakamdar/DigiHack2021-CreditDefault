@@ -1,1 +1,1 @@
-# DigiHack2021-CreditDefault
+# DigiHack 2021 - Credit Default Prediction
