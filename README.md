@@ -57,3 +57,21 @@ Make a decision regarding whether to grant a loan to the customers that have app
 **7. Weight of Evidence** - The weight of evidence (WOE), which tells the predictive power of an independent variable with respect to a dependent variable, was used to combine categories of categorical variables that behaved in a similar manner to classify the dependent variable. Since the categorical variable Organization Type had multiple categories, categories were combined based on the WOE values. The variable Net Income was highly positively skewed, so the values were binned after a log transformation and categories with similar WOE values were combined.
 
 **8. Unbalanced Target Variable** - The Target variable in the dataset was highly unbalanced. 92% of the target values were 0, and the rest 1. To avoid poor perfomance on an imbalanced dataset, Synthetic Minority Oversampling Technique (SMOTE) was used. SMOTE works by selecting examples that are close in the feature space, drawing a line between the examples in the feature space, and drawing a new sample along that line. Post oversampling, the data had 7182 data points and the proportion of each value in the target variable was 0.5.
+
+## Approach
+To predict default, four classifiers were used and accuracies before and after feature selection were compared.
+
+**1. Logistic Regression:** The most popular classifier for predicting loan defaults is the Binary Logistic Regression model which gave an accuracy of 58% on our data. 
+**Final accuracy post feature selection: 71%**
+
+**2. Random Forest Classifier:** An ensemble model created by bagging decision trees, the Random Forest Classifier with 100 decision trees gave an accuracy of 95% on our data.
+**Final accuracy post feature selection: 96.6%**
+
+**3. XG Boost Classifier:** A boosting algorithm that builds decision trees sequentially to minimize error, the XG Boost Classifier gave an accuracy of 94.9% on our data.
+**Final accuracy post feature selection: 95.3%**
+
+**4. Light GBM Classifier:** Another boosting algorithm that increases efficiency through leaf-wise growth, the Light GBM classifier gave an accuracy of 95.7% on our data.
+**Final accuracy post feature selection: 96.4%**
+
+## Conclusion and Results
+Recommending the Random Forest Classifier (post feature selection) to predict defaults and providing additional functionalities such as loss estimation and micro-financing, my team stood **1st** in DigiHack 2021.
